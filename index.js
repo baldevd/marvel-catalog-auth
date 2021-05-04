@@ -14,7 +14,7 @@ const app = express();
 
 // db
 mongoose
- .connect('mongodb+srv://new-user:k9ZIVn9wTKIejqH1@cluster0.ykm5x.mongodb.net/Users?retryWrites=true&w=majority',{
+ .connect('mongodb+srv://new-user:k9ZIVn9wTKIejqH1@cluster0.ykm5x.mongodb.net/Users?retryWrites=true&w=majority&ssl=true',{
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
