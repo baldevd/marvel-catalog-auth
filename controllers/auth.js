@@ -106,7 +106,7 @@ exports.signin = (req, res) => {
                 jwt.verify(access_token, process.env.TOKEN_SECRET, (err,
                     decoded) => {
                     if (err) {
-                        res.status(500).json({ errors: err });
+                        res.status(500).json({ errors: err.toString() });
                     }
                     if (decoded) {
                         return res.status(200).json({
