@@ -19,7 +19,8 @@ mongoose
     useCreateIndex: true,
     useUnifiedTopology: true
 })
- .then(() => console.log('DB Connected'));
+ .then(() => console.log('DB Connected'))
+ .catch(err => console.log(err));
 
 //middlewares
 app.use(bodyParser.json());
