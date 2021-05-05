@@ -4,8 +4,6 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 require('dotenv').config();
 
-console.log("Hello, world!");
-
 //import routes
 const authRoutes = require('./routes/auth');
 const { db } = require('./models/User');
