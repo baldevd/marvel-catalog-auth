@@ -14,13 +14,12 @@ const app = express();
 
 // db
 mongoose
- .connect('mongodb+srv://new-user:k9ZIVn9wTKIejqH1@cluster0.ykm5x.mongodb.net/Users?retryWrites=true&w=majority',{
+ .connect(process.env.DATABASE,{
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
 })
- .then(() => console.log('DB Connected'))
- .catch(err => console.log(err));
+ .then(() => console.log('DB Connected'));
 
 //middlewares
 app.use(bodyParser.json());
